@@ -1,5 +1,7 @@
 # EGGSTRACTOR #
 
+use eggstract-nca.sh [nca file] to extract exefs and romfs from nca file
+
 use eggstract-xci.sh [xci file] to extract exefs and romfs from xci file
 
 use eggmulator-xci.sh [xci file] to extract exefs and romfs from xci file in an emulator ready form
