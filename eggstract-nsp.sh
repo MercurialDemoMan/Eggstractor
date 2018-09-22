@@ -24,7 +24,15 @@ cd ..
 mkdir "out/exefs"
 mkdir "out/romfs"
 
-./hactool -k keys.ini --titlekey=$title_key --exefsdir=out/exefs --romfsdir=out/romfs $biggest_file
+if [ -z "$tik_file" ]; then
+
+	./hactool -t nca -k keys.ini --exefsdir=out/exefs --romfsdir=out/romfs $biggest_file
+
+else
+
+	./hactool -t nca -k keys.ini --titlekey=$title_key --exefsdir=out/exefs --romfsdir=out/romfs $biggest_file
+
+fi
 
 #cleanup
 rm out/*.nca
